@@ -27,6 +27,15 @@ e.g
 		<div class="ui five wide column">7</div>
 	</div>
 ````
+想要等分?
+````
+	<div class="ui three column grid">
+		<div class="ui column">1</div>
+		<div class="ui column">2</div>
+		<div class="ui column">3</div>
+	</div>
+````
+
 
 #### ui column
 grid中的直向容器，搭配'xxx wide'指定寬度，一列上限為16，超過則換列。 
