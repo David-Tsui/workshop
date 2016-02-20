@@ -4,8 +4,8 @@
 學員可以clone回去用
 
 1. 引入lib 
-   css: <link rel="stylesheet" href="style.css">
-   javascript: <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-beta1/jquery.min.js"></script>
+   css: ````<link rel="stylesheet" href="style.css">````
+   javascript: ````<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-beta1/jquery.min.js"></script>````
 
 2. 基本排版
    ui grid => 最外層的grid容器，共分成 16 wide 的column
