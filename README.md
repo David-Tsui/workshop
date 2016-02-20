@@ -15,9 +15,21 @@
 
 #### ui grid
 最外層的grid容器，共分成 16 wide 的column
+e.g 
+````
+	<div class="ui grid">
+		<div class="ui ten wide column">1</div>
+		<div class="ui six wide column">2</div>
+		<div class="ui five wide column">3</div>
+		<div class="ui eleven wide column">4</div>
+		<div class="ui eight wide column">5</div>
+		<div class="ui ten wide column">6</div>
+		<div class="ui five wide column">7</div>
+	</div>
+````
 
 #### ui column
-grid中的直向容器，搭配'xxx wide'指定寬度，一列上限為16。 
+grid中的直向容器，搭配'xxx wide'指定寬度，一列上限為16，超過則換列。 
 e.g 
 ````
 	<div class="ui eight wide column">left</div>
@@ -27,4 +39,17 @@ e.g
 搭配column使用，'xxx wide'指定寬度，xxx 為英文的數字，one, four, ten, ... twelve etc.
 #### row
 grid中的橫向容器，確保在row中，不超過16wide的column會在同一列，而不在row中的則自動換列
+e.g 
+````
+	<div class="ui grid">
+		<div class="row">
+			<div class="ui four wide column">left</div>
+			<div class="ui eight wide column">right</div>
+		</div>
+		<div class="row">
+			<div class="ui six wide column">left</div>
+			<div class="ui ten wide column">right</div>
+		</div>
+	</div>
+````
 
