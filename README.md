@@ -3,9 +3,7 @@
 
 學員可以clone回去用
 
-##1. 引入lib 
-	 
-	 (範本中已引入)
+##1. 引入library (範本中已引入)
 
    css: 
    ````<link rel="stylesheet" href="style.css">````
