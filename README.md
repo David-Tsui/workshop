@@ -18,12 +18,11 @@
 
 #### ui column
 grid中的直向容器，搭配'xxx wide'指定寬度，一列上限為16。 
-
-     e.g 
-     ````
-     		<div class="ui eight wide column">left</div>
-     		<div class="ui eight wide column">right</div>
-     ````
+e.g 
+````
+		<div class="ui eight wide column">left</div>
+		<div class="ui eight wide column">right</div>
+````
 #### wide
 搭配column使用，'xxx wide'指定寬度，xxx 為英文的數字，one, four, ten, ... twelve etc.
 #### row
