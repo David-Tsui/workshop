@@ -14,6 +14,7 @@
    ui column => grid中的直向容器，搭配'xxx wide'指定寬度，一列上限為16。 
      xxx 為英文的數字，one, four, ten, ... twelve etc.
      e.g ````'<div class="ui eight wide column">left</div>
+     
      					</div class="ui eight wide column">right</div>'````
 
    row => grid中的橫向容器，確保在row中，不超過16wide的column會在同一列，而不在row中的則自動換列
