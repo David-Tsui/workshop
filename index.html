@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>個人網頁範本</title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.1.8/semantic.min.css">
+	<link rel="stylesheet" href="style.css">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-beta1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.1.8/semantic.min.js"></script>
+	<script>
+		$(document).ready(function() {
+			$('.tabular.menu .item').tab();
+			getData().then(function(response) {
+				// console.log("response: ", response);
+				var data = response.output;
+				var text = "";
+				for(var i = 0; i < data.length; i++) {
+					var obj = data[i];
+					text += "<tr><td>" + obj["時間"] + '</td><td>' + obj["事件"] + '</td></tr>';
+				}
+				$("#table-content").html(text);
+				$("#loading-table").show();
+				$("#loader").hide();
+			});
+
+		});
+
+		function getData() {
+			var api = "https://script.google.com/macros/s/AKfycby52BiF0rQaBkVqazHEhIiCrSkc7uXiDcJXfXGYkyTrai_xjLoi/exec";
+			return $.get(api, {query: JSON.stringify({})});
+		}
+	</script>
+</head>
+<body>
+	<div class="ui stackable grid" id="main">
+		<!-- <div class="row"> -->
+			<div class="four wide column" id="left">
+				<h1>WHO AM I?</h1>
+				<h3>I'm Jelly Fish - 馬英丸</h3>
+				<div class="ui card" id="profile-card">
+				  <div class="image">
+				    <img src="images/avatar1.jpg">
+				  </div>
+				  <div class="content">
+				    <div class="header">馬皇</div>
+				    <div class="meta">
+				      <span class="date">Borned in 1950/7/13</span>
+				    </div>
+				    <div class="description">
+				      我這不是來了嗎？
+				    </div>
+				  </div>
+				  <!-- <div class="extra content">
+				    <a>
+				      <i class="user icon"></i>
+				      22 Friends
+				    </a>
+				  </div> -->
+				</div>
+			</div>
+			<div class="eight wide column" id="middle">
+				<div class="ui bottom attached active tab basic segment" data-tab="first">
+				  <div class="blur-segment">
+					  <p>大家好，我是馬皇，曾擔任中華民國第12任及第13任總統。生於英屬香港九龍油麻地，籍貫湖南省衡山縣，1952年隨雙親定居台灣。</p>
+					  <p>我有KMT黃金黨證，曾任副秘書長與黨主席、總統府第一局副局長、行政院研考會主委、陸委會副主委、法務部長與台北市長等職位。</p>
+					  <p>各種淫威你們怕了沒有？</p>
+					  <div class="ui segment" id="loading-box">
+					  	<div class="ui top attached big label" style="z-index: 2">事蹟展示</div>
+			  	  	<table class="ui celled table" id="loading-table">
+			  	  	  <thead>
+			  	  	    <tr>
+			  		  	    <th>時間</th>
+			  		  	    <th>事件</th>
+			  	  	  	</tr>
+			  	  	  </thead>
+			  	  	  <tbody id="table-content"></tbody>
+			  	  	</table>
+					  	<div class="ui active inverted dimmer" id="loader" style="z-index: 1; margin-top: 2rem">
+				  	    <div class="ui text loader">Loading</div>
+				  	  </div>
+					  </div>
+					</div>
+				</div>
+				<div class="ui bottom attached tab basic segment" data-tab="second">
+					<div class="blur-segment">
+				  	<div class="ui two column stackable grid">
+				  		<div class="ui centered large image">
+				  			<img src="http://static.inf.hk/media/2013/news/2013-02-14/20130214223442c1360820315045b.jpg" alt="not found">
+				  		</div>
+				  		<div class="row">
+				  			<div class="center aligned column">
+				  				<h2>親中</h2>
+				  			</div>
+				  			<div class="ui vertical divider">
+				  			  AND
+				  			</div>
+				  			<div class="center aligned column">
+				  			  <h2>賣台</h2>
+				  			</div>
+				  		</div>
+				  	  <div class="row">
+				  	  	<div class="column">
+				  	  		<div class="ui olive progress active">
+				  	  		  <div class="bar"  style="width: 65%;">
+				  	  		    <div class="progress">Good</div>
+				  	  		  </div>
+				  	  		  <div class="label">HTML</div>
+				  	  		</div>
+				  	  		<div class="ui olive progress active">
+				  	  		  <div class="bar" style="width: 65%;">
+				  	  		    <div class="progress">Good</div>
+				  	  		  </div>
+				  	  		  <div class="label">CSS</div>
+				  	  		</div>
+				  	  	</div> 
+				  	  	<div class="column">
+				  	  	  <div class="ui orange progress active">
+				  	  	    <div class="bar" style="width: 50%;">
+				  	  	      <div class="progress">Average</div>
+				  	  	    </div>
+				  	  	    <div class="label">C</div>
+				  	  	  </div>
+				  	  	  <div class="ui orange progress active">
+				  	  	    <div class="bar" style="width: 50%;">
+				  	  	      <div class="progress">Average</div>
+				  	  	    </div>
+				  	  	    <div class="label">Java</div>
+				  	  	  </div>
+					  	  </div>
+					  	 </div>
+            </div>
+				  </div>
+				</div>
+				<div class="ui bottom attached tab basic segment" data-tab="third">
+					<div class="blur-segment">
+				  	<table class="ui very basic table">
+              <tbody>
+                <tr>
+                  <td>住址</td>
+                  <td>狡兔有三窟，我可能在台灣、中國、美國的任一處</td>
+                </tr>
+                <tr>
+                  <td>FB</td>
+                  <td><a href="https://www.facebook.com/MaYingjeou/?fref=ts" target="_blank">我的FB</a></td>
+                </tr>
+              </tbody>
+            </table>
+					</div>
+				</div>
+			</div>
+			<div class="four wide column" id="right">
+				<div class="ui vertical fluid right tabular menu" id="tab-menu">
+					<a class="active item" data-tab="first">生平介紹</a>
+				  <a class="item" data-tab="second">專業技能</a>
+				  <a class="item" data-tab="third">聯絡資訊</a>
+				</div>
+			</div>
+		<!-- </div> -->
+	</div>
+</body>
+</html>
