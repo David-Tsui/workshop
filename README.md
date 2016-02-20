@@ -18,6 +18,7 @@
 
 #### ui column
 grid中的直向容器，搭配'xxx wide'指定寬度，一列上限為16。 
+
      e.g 
      ````
      		<div class="ui eight wide column">left</div>
